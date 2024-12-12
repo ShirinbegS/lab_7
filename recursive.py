@@ -1,10 +1,10 @@
 def count(lst):
-    total = 0
+    n = 0
     for item in lst:
-        if isinstance(item, list):  # Если элемент — это список
-            total += count(item)
-            total +=1  # Рекурсивно считаем элементы в этом подсписке
+        if isinstance(item,list):  # Если элемент — это список
+            n += count(item)
+            n+=1  # Рекурсивно считаем элементы в этом подсписке
         else:
-            total += 1  # Увеличиваем счётчик для обычных элементов
-    return total
+            n += 1 
+    return n
 print(count([1, 2, [3, 4, [5]]]))
